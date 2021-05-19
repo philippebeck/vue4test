@@ -1,29 +1,33 @@
 <template>
-  <figure>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <figcaption>
-
-      <Link url="https://vuejs.org"
-        title="Go to Vue Website"
-        text="Vue" />
-
-      <p>The Progressive JavaScript Framework</p>
-    </figcaption>
-  </figure>  
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <router-view/>
 </template>
 
-<script>
-import Link from './components/Link.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Link
-  }
-}
-</script>
-
 <style lang="scss">
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  #nav {
+    padding: 30px;
+
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+
   @import url('https://fonts.googleapis.com/css2?family=Combo&family=GFS+Neohellenic&family=Inika&family=Nova+Mono&display=swap');
 
   // Breakpoints
@@ -32,7 +36,6 @@ export default {
   $breakpoint-lg: 992px   !default;
   $breakpoint-xl: 1200px  !default;
   $breakpoint-wd: 1600px  !default;
-
   $breakpoints: (
     'sm': $breakpoint-sm,
     'md': $breakpoint-md,
@@ -157,13 +160,11 @@ export default {
 
   * {
     --all-box-sizing: border-box;
-
     box-sizing: var(--all-box-sizing);
   }
 
   *:target {
     --target-margins: 7rem;
-
     padding-top: var(--target-margins);
     margin-top: -var(--target-margins);
   }
@@ -171,7 +172,6 @@ export default {
   html {
     --html-font-size: 62.5%;
     --html-scroll-behavior: smooth;
-
     font-size: var(--html-font-size);
     scroll-behavior: var(--html-scroll-behavior);
   }
@@ -181,17 +181,15 @@ export default {
       scroll-behavior: auto;
     }
   }
-
+  
   body {
     --body-text-align: center;
     --body-line-height: 1.6;
     --body-font-size: 2rem;
     --body-color: var(--black);
     --body-background-color: var(--grey-light);
-
     margin: 0;
     padding: 0;
-
     text-align: var(--body-text-align);
     line-height: var(--body-line-height);
     font-size: var(--body-font-size);

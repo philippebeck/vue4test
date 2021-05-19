@@ -36,6 +36,7 @@
   $breakpoint-lg: 992px   !default;
   $breakpoint-xl: 1200px  !default;
   $breakpoint-wd: 1600px  !default;
+  
   $breakpoints: (
     'sm': $breakpoint-sm,
     'md': $breakpoint-md,
@@ -181,7 +182,7 @@
       scroll-behavior: auto;
     }
   }
-  
+
   body {
     --body-text-align: center;
     --body-line-height: 1.6;

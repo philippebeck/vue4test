@@ -34,8 +34,3 @@
 @each $key, $value in $primary-colors {
   @include helpers('deco-#{$key}', 'text-decoration-color', 'var(--#{$key})');
 }
-
-// Text Shadow
-@each $key, $value in $text-shadows {
-  @include helpers('shatex-#{$key}', 'text-shadow', 'var(--text-shadow-#{$key})');
-}

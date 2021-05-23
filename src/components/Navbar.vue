@@ -1,5 +1,50 @@
 <template>
+  <nav class="navbar">
+    <input id="navbar-close" 
+      class="navbar-close" 
+      type="radio" 
+      name="navbar" 
+      checked>
+    <input id="navbar-open" 
+      class="navbar-open" 
+      type="radio" 
+      name="navbar">
 
+    <a :href="brandHref" 
+      :title="brandTitle">
+      <img :src="brandSrc" 
+        :alt="brandAlt">
+    </a>
+    <ul>
+      <li>
+        <a :href="nav.href" 
+          :title="nav.title">
+          <i class="fas fa-lg"
+            :class="nav.icon"></i>
+          <span>{{ nav.text }}</span>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a :class="linkClass" 
+          :href="linkHref" 
+          :title="linkTitle">
+          <i class="fab fa-lg"
+            :class="linkIcon"></i>
+        </a>
+      </li>
+    </ul>
+
+    <label for="navbar-close" 
+          title="Close the Navigation Menu">
+      <i class="fas fa-angle-double-up fa-lg"></i>
+    </label>
+    <label for="navbar-open" 
+          title="Open the Navigation Menu">
+      <i class="fas fa-angle-double-down fa-lg"></i>
+    </label>
+  </nav>
 </template>
     
 <script>

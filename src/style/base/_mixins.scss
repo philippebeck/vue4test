@@ -1,53 +1,9 @@
 // ***** Base : Mixins *****
 
-// Keyframes
-@mixin keyframes($key) {
-  @keyframes #{$key} {
-    from {
-      transform: var(--#{$key});
-    }
-  }
-}
-
 // Container
 @mixin container($key, $type, $value) {
   [class*="container-"][class*="-#{$key}#{$type}"] {
     max-width: #{$value};
-  }
-}
-
-// Grid
-@mixin grid-template($column, $key) {
-  [class*="grid-"][class*="-#{$column}#{$key}"] {
-    grid-template: auto/repeat(#{$column}, auto);
-  }
-}
-
-// Grid Gap
-@mixin grid-gap($key) {
-  [class*="gap-"][class*="-#{$key}"] {
-    grid-gap: var(--gap-#{$key});
-  }
-}
-
-// Place Content
-@mixin place-content($key, $type: '', $value: var(--place-content-#{$key})) {
-  .placo-#{$key}#{$type} {
-    place-content: #{$value};
-  }
-}
-
-// Place Items
-@mixin place-items($key, $type: '', $value: var(--place-items-#{$key})) {
-  .plait-#{$key}#{$type} {
-    place-items: #{$value};
-  }
-}
-
-// Place Self
-@mixin place-self($key, $type: '', $value: var(--place-self-#{$key})) {
-  .plase-#{$key}#{$type} {
-    place-self: #{$value};
   }
 }
 
@@ -69,27 +25,5 @@
   [class*="onto-"][class*="#{$class}"]:focus,
   [class*="check-"][class*="#{$class}"]:checked ~ [class*="hub-"][class*="#{$class}"] [class*="goal-"][class*="#{$class}"] {
       #{$property}: #{$value};
-  }
-}
-
-// Anima
-@mixin anima($class, $property, $value) {
-  [class*="anima-"][class*="-#{$class}-"][class*="-this"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-global"] > *,
-  [class*="anima-"][class*="-#{$class}-"][class*="-onto"]:hover,
-  [class*="anima-"][class*="-#{$class}-"][class*="-onto"]:focus,
-  *:hover > [class*="anima-"][class*="-#{$class}-"][class*="-into"],
-  *:focus > [class*="anima-"][class*="-#{$class}-"][class*="-into"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-toall"]:hover > *,
-  [class*="anima-"][class*="-#{$class}-"][class*="-toall"]:focus > *,
-  [class*="anima-"][class*="-#{$class}-"][class*="-toone"] > *:hover,
-  [class*="anima-"][class*="-#{$class}-"][class*="-toone"] > *:focus,
-  [class*="anima-"][class*="-#{$class}-"][class*="-radio1"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-relay"] [class*="anima-"][class*="-#{$class}-"][class*="-target1"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-radio2"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-relay"] [class*="anima-"][class*="-#{$class}-"][class*="-target2"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-radio3"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-relay"] [class*="anima-"][class*="-#{$class}-"][class*="-target3"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-radio4"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-relay"] [class*="anima-"][class*="-#{$class}-"][class*="-target4"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-radio5"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-relay"] [class*="anima-"][class*="-#{$class}-"][class*="-target5"],
-  [class*="anima-"][class*="-#{$class}-"][class*="-check"]:checked ~ [class*="anima-"][class*="-#{$class}-"][class*="-hub"] [class*="anima-"][class*="-#{$class}-"][class*="-goal"] {
-    #{$property}: #{$value};
   }
 }

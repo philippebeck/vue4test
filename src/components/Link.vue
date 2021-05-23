@@ -1,14 +1,26 @@
+<!-------------------------->
+<!-- Link Basic Component -->
+<!-------------------------->
+
 <template>
-  <a :href="url"
+  <a :href="href" 
     :title="title">
-    {{ text }}
+    <slot></slot>
   </a>
 </template>
 
 <script>
   export default {
     name: "Link",
-    props: ["url", "title", "text"]
+    props: {
+      href: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String
+      }
+    }
   }
 </script>
 

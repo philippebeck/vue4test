@@ -132,15 +132,15 @@
 
   function setPanelListeners() {
     if (lineElt) {
-      lineElt.addEventListener("input", setLine.bind(this));
+      lineElt.addEventListener("input", setLine);
     }
 
     if (colorElt) {
-      colorElt.addEventListener("input", setColor.bind(this));
+      colorElt.addEventListener("input", setColor);
     }
 
     if (cleanerElt) {
-      cleanerElt.addEventListener("click", cleanCanvas.bind(this));
+      cleanerElt.addEventListener("click", cleanCanvas);
     }
   }
 
@@ -149,13 +149,13 @@ function setCanvasListeners() {
 
     canvasElt.addEventListener("mousedown", moveInCanvas.bind(this, "mouse"));
     canvasElt.addEventListener("mousemove", drawInCanvas.bind(this, "mouse"));
-    canvasElt.addEventListener("mouseup", stopDrawing.bind(this));
-    canvasElt.addEventListener("mouseout", stopDrawing.bind(this));
+    canvasElt.addEventListener("mouseup", stopDrawing);
+    canvasElt.addEventListener("mouseout", stopDrawing);
 
     canvasElt.addEventListener("touchstart", moveInCanvas.bind(this, "touch"));
     canvasElt.addEventListener("touchmove", drawInCanvas.bind(this, "touch"));
-    canvasElt.addEventListener("touchend", stopDrawing.bind(this));
-    canvasElt.addEventListener("touchcancel", stopDrawing.bind(this));
+    canvasElt.addEventListener("touchend", stopDrawing);
+    canvasElt.addEventListener("touchcancel", stopDrawing);
   }
   }
 

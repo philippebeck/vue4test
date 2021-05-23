@@ -5,7 +5,9 @@
     <Head text="This is a Head Example of a Vue Component !"/>
 
     <figure>
-      <img alt="Vue logo" src="../assets/logo.png">
+      <img alt="Vue logo" 
+        src="../assets/logo.png">
+        
       <figcaption>
         <Link url="https://vuejs.org"
           title="Go to Vue Website"
@@ -21,14 +23,16 @@
 
 <script>
 // @ is an alias to /src
-import Head from '@/components/Head.vue'
-import Link from '@/components/Link.vue'
-//import Canvas from '@/components/Canvas.vue'
+import Head from "@/components/Head.vue"
+//import Img from "@/components/Img.vue"
+import Link from "@/components/Link.vue"
+//import Canvas from "@/components/Canvas.vue"
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Head,
+    //Img,
     Link//,
     //Canvas
   }

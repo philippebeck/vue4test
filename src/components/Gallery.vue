@@ -1,10 +1,27 @@
 <template>
-
+  <ul class="gallery">
+    <li v-for="media in mediaList" 
+      :key="media">
+      <figure>
+        <img :src="media.src" 
+            :alt="media.alt">
+        <figcaption>
+          <a :href="media.href" 
+            :title="media.title">
+            <h2>{{ media.title }}</h2>
+            <p>{{ media.description }}</p>
+            <i class="fas fa-image"></i>
+          </a>
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
 </template>
     
 <script>
   export default {
-    name: "Gallery"
+    name: "Gallery",
+    props: ["src", "alt", "href", "title", "description"]
   }
 </script>
 
@@ -114,21 +131,21 @@
     }
   }
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: 768px) {
     @include gallery(10px, calc(100% / 2 - 20px));
   }
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: 992px) {
     .gallery {
       --gallery-figcaption-bottom: -60%;
     }
   }
 
-  @media (min-width: $breakpoint-xl) {
+  @media (min-width: 1200px) {
     @include gallery(15px, calc(100% / 3 - 30px));
   }
 
-  @media (min-width: $breakpoint-wd) {
+  @media (min-width: 1600px) {
     @include gallery(20px, calc(100% / 4 - 40px));
   }
 

@@ -24,13 +24,10 @@
     --head-box-shadow: inset 0 0 10px 2px var(--secondary);
     --head-background-color: var(--white);
     --head-color: var(--primary);
-
     --head-title-margin: 0 auto 5px;
     --head-title-text-transform: uppercase;
-
     --head-hover-transform: scale(1.1);
     --head-hover-transition: transform 2s 200ms;
-
     --head-selection-background-color: var(--black);
     --head-selection-color: var(--green);
 

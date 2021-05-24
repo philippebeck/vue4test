@@ -1,11 +1,12 @@
-<!-------------------------->
-<!-- Link Basic Component -->
-<!-------------------------->
+<!---------------------------->
+<!-- Link : basic component -->
+<!---------------------------->
 
 <template>
   <a :href="href" 
     :title="title">
     <slot></slot>
+    {{ content }}
   </a>
 </template>
 
@@ -19,6 +20,9 @@
       },
       title: {
         type: String
+      },
+      content: {
+        type: String
       }
     }
   }
@@ -26,17 +30,12 @@
 
 <style lang="scss" scoped>
   a {
-    --link-color: var(--primary);
-    --link-text-decoration: none;
-
-    color: var(--link-color);
-    text-decoration: var(--link-text-decoration);    
+    color: var(--primary);
+    text-decoration: none;    
   }
 
   a:hover,
   a:focus {
-    --link-color-hover: var(--violet);
-    
-    color: var(--link-color-hover);
+    color: var(--violet);
   }
 </style>

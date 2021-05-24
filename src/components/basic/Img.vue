@@ -1,6 +1,6 @@
-<!------------------------->
-<!-- Img Basic Component -->
-<!------------------------->
+<!--------------------------->
+<!-- Img : basic component -->
+<!--------------------------->
 
 <template>
   <img :src="src" 
@@ -25,12 +25,8 @@
 
 <style lang="scss" scoped>
   img {
-    --img-max-width: 100%;
-    --img-height: auto;
-    --img-object-fit: contain;
-
-    max-width: var(--img-max-width);
-    height: var(--img-height);
-    object-fit: var(--img-object-fit);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 </style>

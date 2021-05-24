@@ -1,6 +1,8 @@
 <template>
   <section class="home">
-    <h1>This is the home page</h1>
+    <Title content="This is the home page">
+      <i class="fas fa-home"></i>
+    </Title>
 
     <Head text="This is a Head Example of a Vue Component !"/>
 
@@ -28,6 +30,7 @@
 import Head from "@/components/Head.vue"
 import Img from "@/components/Img.vue"
 import Link from "@/components/Link.vue"
+import Title from "@/components/Title.vue"
 //import Canvas from "@/components/Canvas.vue"
 
 export default {
@@ -35,7 +38,8 @@ export default {
   components: {
     Head,
     Img,
-    Link
+    Link,
+    Title
     //Canvas
   }
 }

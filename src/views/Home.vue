@@ -21,17 +21,30 @@
       </figcaption>
     </figure>
 
+    <List :list="[
+      'tomato', 
+      'apple', 
+      'banana', 
+      'strawberry',
+      'pear',
+      'blueberry',
+      'orange',
+      'lemon'
+    ]">
+    </List>
+
     <!-- <Canvas/> -->
   </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import Head from "@/components/Head.vue"
-import Img from "@/components/Img.vue"
-import Link from "@/components/Link.vue"
-import Title from "@/components/Title.vue"
-//import Canvas from "@/components/Canvas.vue"
+import Head from "@/components/basic/Head.vue"
+import Img from "@/components/basic/Img.vue"
+import Link from "@/components/basic/Link.vue"
+import Title from "@/components/basic/Title.vue"
+import List from "@/components/basic/List.vue"
+//import Canvas from "@/components/special/Canvas.vue"
 
 export default {
   name: "Home",
@@ -39,6 +52,7 @@ export default {
     Head,
     Img,
     Link,
+    List,
     Title
     //Canvas
   }

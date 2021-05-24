@@ -56,20 +56,3 @@ table {
   vertical-align: var(--table-vertical-align);
   font-family: var(--monospace);
 }
-
-code,
-pre {
-  overflow: var(--code-overflow);
-  margin: var(--code-margin);
-  padding: var(--code-padding);
-  width: var(--code-width);
-  font-family: var(--monospace);
-  text-align: var(--code-text-align);
-  background-color: var(--code-background-color);
-  color: var(--code-color);
-
-  & > *::selection {
-    background-color: var(--code-color);
-    color: var(--code-background-color);
-  }
-}

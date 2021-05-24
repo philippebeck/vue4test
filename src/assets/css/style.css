@@ -1,4 +1,4 @@
-/*! vue4test v0.1.4 | https://philippebeck.net | Apache-2.0 License License */
+/*! vue4test v0.1.6 | https://philippebeck.net | Apache-2.0 License License */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -466,47 +466,6 @@ table {
   --table-vertical-align: middle;
 }
 
-code,
-pre {
-  --code-background-color: var(--black);
-  --code-color: var(--green);
-  --code-margin: auto;
-  --code-overflow: scroll;
-  --code-padding: 10px;
-  --code-text-align: initial;
-  --code-width: 100%;
-}
-
-@media (min-width: 576px) {
-  code,
-pre {
-    --code-width: 95%;
-  }
-}
-@media (min-width: 768px) {
-  code,
-pre {
-    --code-width: 90%;
-  }
-}
-@media (min-width: 992px) {
-  code,
-pre {
-    --code-width: 85%;
-  }
-}
-@media (min-width: 1200px) {
-  code,
-pre {
-    --code-width: 80%;
-  }
-}
-@media (min-width: 1600px) {
-  code,
-pre {
-    --code-width: 75%;
-  }
-}
 /***** Base : Tags *****/
 * {
   box-sizing: var(--all-box-sizing);
@@ -563,27 +522,6 @@ table {
   text-align: var(--table-text-align);
   vertical-align: var(--table-vertical-align);
   font-family: var(--monospace);
-}
-
-code,
-pre {
-  overflow: var(--code-overflow);
-  margin: var(--code-margin);
-  padding: var(--code-padding);
-  width: var(--code-width);
-  font-family: var(--monospace);
-  text-align: var(--code-text-align);
-  background-color: var(--code-background-color);
-  color: var(--code-color);
-}
-code > *::-moz-selection, pre > *::-moz-selection {
-  background-color: var(--code-color);
-  color: var(--code-background-color);
-}
-code > *::selection,
-pre > *::selection {
-  background-color: var(--code-color);
-  color: var(--code-background-color);
 }
 
 /***** Classes : Init *****/
@@ -1534,4 +1472,4 @@ pre > *::selection {
 }
 
 /*! Author: Philippe Beck <philippe@philippebeck.net>
- Updated: 24th May 2021 @ 1:57:20 PM */
+ Updated: 24th May 2021 @ 9:24:09 PM */

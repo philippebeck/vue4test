@@ -1,10 +1,31 @@
 <template>
+  <section class="card-violet">
+      <figure>
+        <Img :src="src" 
+          :alt="alt"/>
+      </figure>
 
+      <Title :content="titleContent">
+      </Title>
+
+      <p>
+        {{ content }}
+      </p>
+
+      <Link class="btn" 
+        :href="href"
+        :title="title"
+        :content="linkContent">
+      </Link>
+    </section>
 </template>
     
 <script>
   export default {
-    name: "Card"
+    name: "Card",
+    props: {
+
+    }
   }
 </script>
 

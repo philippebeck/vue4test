@@ -1,3 +1,7 @@
+<!---------------------------->
+<!-- Head : basic component -->
+<!---------------------------->
+
 <template>
   <header class="head">
     {{ text }}

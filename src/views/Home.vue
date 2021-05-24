@@ -21,6 +21,14 @@
       </figcaption>
     </figure>
 
+    <Button content="Clic on Me!">
+
+    </Button>
+
+    <Code content="$php !== js">
+      <i class="fas fa-code"></i>
+    </Code>
+
     <List :list="[
       'tomato', 
       'apple', 
@@ -39,7 +47,9 @@
 
 <script>
 // @ is an alias to /src
+import Code from "@/components/basic/Code.vue"
 import Head from "@/components/basic/Head.vue"
+import Button from "@/components/basic/Button.vue"
 import Img from "@/components/basic/Img.vue"
 import Link from "@/components/basic/Link.vue"
 import Title from "@/components/basic/Title.vue"
@@ -49,10 +59,12 @@ import List from "@/components/basic/List.vue"
 export default {
   name: "Home",
   components: {
+    Code,
     Head,
     Img,
     Link,
     List,
+    Button,
     Title
     //Canvas
   }

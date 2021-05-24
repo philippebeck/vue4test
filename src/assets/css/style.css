@@ -448,12 +448,6 @@ article {
   --article-margin-bottom: 20px;
 }
 
-ul {
-  --list-margin: 0 0 10px;
-  --list-padding: 0;
-  --list-style: none;
-}
-
 figure {
   --figure-margin: 0;
 }
@@ -549,12 +543,6 @@ main {
 
 article {
   margin-bottom: var(--article-margin-bottom);
-}
-
-ul {
-  margin: var(--list-margin);
-  padding: var(--list-padding);
-  list-style: var(--list-style);
 }
 
 figure {
@@ -1546,4 +1534,4 @@ pre > *::selection {
 }
 
 /*! Author: Philippe Beck <philippe@philippebeck.net>
- Updated: 24th May 2021 @ 12:33:22 PM */
+ Updated: 24th May 2021 @ 1:57:20 PM */

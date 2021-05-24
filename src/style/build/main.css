@@ -95,12 +95,6 @@ article {
   --article-margin-bottom: 20px;
 }
 
-ul {
-  --list-margin: 0 0 10px;
-  --list-padding: 0;
-  --list-style: none;
-}
-
 figure {
   --figure-margin: 0;
 }
@@ -196,12 +190,6 @@ main {
 
 article {
   margin-bottom: var(--article-margin-bottom);
-}
-
-ul {
-  margin: var(--list-margin);
-  padding: var(--list-padding);
-  list-style: var(--list-style);
 }
 
 figure {

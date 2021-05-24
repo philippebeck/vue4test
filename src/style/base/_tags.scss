@@ -38,25 +38,6 @@ article {
   margin-bottom: var(--article-margin-bottom);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--title-font-family);
-  text-align: var(--title-text-align);
-  text-transform: var(--title-text-transform);
-  font-size: var(--title-font-size);
-  color: var(--title-color);
-}
-
-a {
-  text-decoration: var(--link-text-decoration);
-  outline: var(--link-outline);
-  color: var(--link-color);
-}
-
 ul {
   margin: var(--list-margin);
   padding: var(--list-padding);

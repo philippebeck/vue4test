@@ -1,6 +1,6 @@
 <template>
   <section class="home">
-    <Title content="This is the home page">
+    <Title title="This is the home page">
       <i class="fas fa-home"></i>
     </Title>
 
@@ -8,7 +8,7 @@
 
     <Media legend="The Progressive JavaScript Framework"
       src="img/logo.png"
-      alt="Vue logo">      
+      alt="Vue logo">
         <Link href="https://vuejs.org"
           title="Go to Vue Website">
           <i class="fas fa-home"></i>
@@ -18,6 +18,12 @@
 
     <Button content="Clic on Me!">
     </Button>
+
+    <Container :contents="['blablabla', 'bliblibli', 'blobloblo']"
+      title="test du container"
+      container="container-70sm">
+
+    </Container>
 
     <Video src="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
 
@@ -52,6 +58,7 @@ import Media from "@/components/basic/Media.vue"
 import Video from "@/components/basic/Video.vue"
 import Audio from "@/components/basic/Audio.vue"
 import Link from "@/components/basic/Link.vue"
+import Container from "@/components/basic/Container.vue"
 import Title from "@/components/basic/Title.vue"
 import List from "@/components/basic/List.vue"
 //import Canvas from "@/components/special/Canvas.vue"
@@ -64,6 +71,7 @@ export default {
     Link,
     List,
     Media,
+    Container,
     Audio,
     Button,
     Video,

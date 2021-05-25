@@ -95,17 +95,6 @@ article {
   --article-margin-bottom: 20px;
 }
 
-figure {
-  --figure-margin: 0;
-}
-
-table {
-  --table-border-collapse: collapse;
-  --table-margin: auto;
-  --table-text-align: center;
-  --table-vertical-align: middle;
-}
-
 /***** Base : Tags *****/
 * {
   box-sizing: var(--all-box-sizing);
@@ -142,18 +131,6 @@ main {
 
 article {
   margin-bottom: var(--article-margin-bottom);
-}
-
-figure {
-  margin: var(--figure-margin);
-}
-
-table {
-  margin: var(--table-margin);
-  border-collapse: var(--table-border-collapse);
-  text-align: var(--table-text-align);
-  vertical-align: var(--table-vertical-align);
-  font-family: var(--monospace);
 }
 
 /***** Classes : Init *****/

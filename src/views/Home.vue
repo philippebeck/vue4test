@@ -6,25 +6,22 @@
 
     <Head text="This is a Head Example of a Vue Component !"/>
 
-    <figure>
-      <Img src="img/logo.png"
-        alt="Animadio logo"/>
-        
-      <figcaption>
+    <Media legend="The Progressive JavaScript Framework"
+      src="img/logo.png"
+      alt="Vue logo">      
         <Link href="https://vuejs.org"
           title="Go to Vue Website">
           <i class="fas fa-home"></i>
           Vue
-        </Link>
-
-        <p>The Progressive JavaScript Framework</p>
-      </figcaption>
-    </figure>
+        </Link>      
+    </Media>
 
     <Button content="Clic on Me!">
     </Button>
 
     <Video src="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
+
+    <Audio />
 
     <Code content="$php !== js">
       <i class="fas fa-code"></i>
@@ -51,8 +48,9 @@
 import Code from "@/components/basic/Code.vue"
 import Head from "@/components/basic/Head.vue"
 import Button from "@/components/basic/Button.vue"
-import Img from "@/components/basic/Img.vue"
+import Media from "@/components/basic/Media.vue"
 import Video from "@/components/basic/Video.vue"
+import Audio from "@/components/basic/Audio.vue"
 import Link from "@/components/basic/Link.vue"
 import Title from "@/components/basic/Title.vue"
 import List from "@/components/basic/List.vue"
@@ -63,9 +61,10 @@ export default {
   components: {
     Code,
     Head,
-    Img,
     Link,
     List,
+    Media,
+    Audio,
     Button,
     Video,
     Title

@@ -42,13 +42,6 @@ figure {
   margin: var(--figure-margin);
 }
 
-img,
-video {
-  max-width: var(--img-max-width);
-  height: var(--img-height);
-  object-fit: var(--img-object-fit);
-}
-
 table {
   margin: var(--table-margin);
   border-collapse: var(--table-border-collapse);

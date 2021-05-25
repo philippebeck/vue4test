@@ -5,32 +5,32 @@
 <template>
   <h1 v-if="level == 1"> 
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h1>
 
   <h2 v-else-if="level == 2">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h2>
 
   <h3 v-else-if="level == 3">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h3>
 
   <h4 v-else-if="level == 4">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h4>
 
   <h5 v-else-if="level == 5">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h5>
   
   <h6 v-else>
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h6>
 </template>
 
@@ -42,8 +42,9 @@
         type: [Number, String],
         default: 1
       },
-      content: {
-        type: String
+      title: {
+        type: String,
+        required: true
       }
     }
   }

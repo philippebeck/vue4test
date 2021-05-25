@@ -9,6 +9,19 @@
 </script>
 
 <style lang="scss" scoped>
+  table {
+    --table-border-collapse: collapse;
+    --table-margin: auto;
+    --table-text-align: center;
+    --table-vertical-align: middle;
+
+    margin: var(--table-margin);
+    border-collapse: var(--table-border-collapse);
+    text-align: var(--table-text-align);
+    vertical-align: var(--table-vertical-align);
+    font-family: var(--monospace);
+  }
+  
   .table {
     --table-border-spacing: 10px;
     --table-margin: 50px auto;

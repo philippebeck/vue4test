@@ -95,24 +95,6 @@ article {
   --article-margin-bottom: 20px;
 }
 
-figure {
-  --figure-margin: 0;
-}
-
-img,
-video {
-  --img-max-width: 100%;
-  --img-height: auto;
-  --img-object-fit: contain;
-}
-
-table {
-  --table-border-collapse: collapse;
-  --table-margin: auto;
-  --table-text-align: center;
-  --table-vertical-align: middle;
-}
-
 /***** Base : Tags *****/
 * {
   box-sizing: var(--all-box-sizing);
@@ -149,25 +131,6 @@ main {
 
 article {
   margin-bottom: var(--article-margin-bottom);
-}
-
-figure {
-  margin: var(--figure-margin);
-}
-
-img,
-video {
-  max-width: var(--img-max-width);
-  height: var(--img-height);
-  object-fit: var(--img-object-fit);
-}
-
-table {
-  margin: var(--table-margin);
-  border-collapse: var(--table-border-collapse);
-  text-align: var(--table-text-align);
-  vertical-align: var(--table-vertical-align);
-  font-family: var(--monospace);
 }
 
 /***** Classes : Init *****/

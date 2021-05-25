@@ -448,24 +448,6 @@ article {
   --article-margin-bottom: 20px;
 }
 
-figure {
-  --figure-margin: 0;
-}
-
-img,
-video {
-  --img-max-width: 100%;
-  --img-height: auto;
-  --img-object-fit: contain;
-}
-
-table {
-  --table-border-collapse: collapse;
-  --table-margin: auto;
-  --table-text-align: center;
-  --table-vertical-align: middle;
-}
-
 /***** Base : Tags *****/
 * {
   box-sizing: var(--all-box-sizing);
@@ -502,26 +484,6 @@ main {
 
 article {
   margin-bottom: var(--article-margin-bottom);
-}
-
-figure {
-  margin: var(--figure-margin);
-}
-
-img,
-video {
-  max-width: var(--img-max-width);
-  height: var(--img-height);
-  -o-object-fit: var(--img-object-fit);
-     object-fit: var(--img-object-fit);
-}
-
-table {
-  margin: var(--table-margin);
-  border-collapse: var(--table-border-collapse);
-  text-align: var(--table-text-align);
-  vertical-align: var(--table-vertical-align);
-  font-family: var(--monospace);
 }
 
 /***** Classes : Init *****/
@@ -1472,4 +1434,4 @@ table {
 }
 
 /*! Author: Philippe Beck <philippe@philippebeck.net>
- Updated: 24th May 2021 @ 9:24:09 PM */
+ Updated: 25th May 2021 @ 7:32:25 PM */

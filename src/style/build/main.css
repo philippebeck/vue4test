@@ -1,6 +1,5 @@
 /***** Variables : Init *****/
 :root {
-  --container-max-width: 100%;
   --opacity-dark: 0.8;
   --opacity-light: 0.2;
 }
@@ -91,10 +90,6 @@ main {
   --main-text-align: center;
 }
 
-article {
-  --article-margin-bottom: 20px;
-}
-
 /***** Base : Tags *****/
 * {
   box-sizing: var(--all-box-sizing);
@@ -129,146 +124,12 @@ main {
   text-align: var(--main-text-align);
 }
 
-article {
-  margin-bottom: var(--article-margin-bottom);
-}
-
 /***** Classes : Init *****/
 [class*=check],
 [class*=radio] {
   display: none !important;
 }
 
-[class*=container] {
-  margin: auto;
-  max-width: var(--container-max-width);
-}
-
-[class*=container-][class*="-50tn"] {
-  max-width: 50%;
-}
-
-[class*=container-][class*="-60tn"] {
-  max-width: 60%;
-}
-
-[class*=container-][class*="-70tn"] {
-  max-width: 70%;
-}
-
-[class*=container-][class*="-80tn"] {
-  max-width: 80%;
-}
-
-[class*=container-][class*="-90tn"] {
-  max-width: 90%;
-}
-
-@media (min-width: 576px) {
-  [class*=container-][class*="-50sm"] {
-    max-width: 50%;
-  }
-
-  [class*=container-][class*="-60sm"] {
-    max-width: 60%;
-  }
-
-  [class*=container-][class*="-70sm"] {
-    max-width: 70%;
-  }
-
-  [class*=container-][class*="-80sm"] {
-    max-width: 80%;
-  }
-
-  [class*=container-][class*="-90sm"] {
-    max-width: 90%;
-  }
-}
-@media (min-width: 768px) {
-  [class*=container-][class*="-50md"] {
-    max-width: 50%;
-  }
-
-  [class*=container-][class*="-60md"] {
-    max-width: 60%;
-  }
-
-  [class*=container-][class*="-70md"] {
-    max-width: 70%;
-  }
-
-  [class*=container-][class*="-80md"] {
-    max-width: 80%;
-  }
-
-  [class*=container-][class*="-90md"] {
-    max-width: 90%;
-  }
-}
-@media (min-width: 992px) {
-  [class*=container-][class*="-50lg"] {
-    max-width: 50%;
-  }
-
-  [class*=container-][class*="-60lg"] {
-    max-width: 60%;
-  }
-
-  [class*=container-][class*="-70lg"] {
-    max-width: 70%;
-  }
-
-  [class*=container-][class*="-80lg"] {
-    max-width: 80%;
-  }
-
-  [class*=container-][class*="-90lg"] {
-    max-width: 90%;
-  }
-}
-@media (min-width: 1200px) {
-  [class*=container-][class*="-50xl"] {
-    max-width: 50%;
-  }
-
-  [class*=container-][class*="-60xl"] {
-    max-width: 60%;
-  }
-
-  [class*=container-][class*="-70xl"] {
-    max-width: 70%;
-  }
-
-  [class*=container-][class*="-80xl"] {
-    max-width: 80%;
-  }
-
-  [class*=container-][class*="-90xl"] {
-    max-width: 90%;
-  }
-}
-@media (min-width: 1600px) {
-  [class*=container-][class*="-50wd"] {
-    max-width: 50%;
-  }
-
-  [class*=container-][class*="-60wd"] {
-    max-width: 60%;
-  }
-
-  [class*=container-][class*="-70wd"] {
-    max-width: 70%;
-  }
-
-  [class*=container-][class*="-80wd"] {
-    max-width: 80%;
-  }
-
-  [class*=container-][class*="-90wd"] {
-    max-width: 90%;
-  }
-}
 /***** Classes : Font *****/
 .font-bold,
 .global-font-bold > *,

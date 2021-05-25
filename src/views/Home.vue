@@ -22,8 +22,9 @@
     </figure>
 
     <Button content="Clic on Me!">
-
     </Button>
+
+    <Video src="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
 
     <Code content="$php !== js">
       <i class="fas fa-code"></i>
@@ -51,6 +52,7 @@ import Code from "@/components/basic/Code.vue"
 import Head from "@/components/basic/Head.vue"
 import Button from "@/components/basic/Button.vue"
 import Img from "@/components/basic/Img.vue"
+import Video from "@/components/basic/Video.vue"
 import Link from "@/components/basic/Link.vue"
 import Title from "@/components/basic/Title.vue"
 import List from "@/components/basic/List.vue"
@@ -65,6 +67,7 @@ export default {
     Link,
     List,
     Button,
+    Video,
     Title
     //Canvas
   }

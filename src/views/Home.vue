@@ -1,7 +1,6 @@
 <template>
   <section class="home">
-    <Title title="This is the home page"
-    :lvl="4">
+    <Title title="This is the home page">
       <i class="fas fa-home"></i>
     </Title>
 
@@ -14,7 +13,7 @@
           info="Go to Vue Website">
           <i class="fas fa-home"></i>
           Vue
-        </Link>      
+        </Link>
     </Media>
 
     <Button content="Clic on Me!">
@@ -30,6 +29,12 @@
       url="https://www.freecodecamp.org/news/long-code-vs-short-code">
 
     </Quote>
+
+    <Field name="test"
+      label="Text Enter !"
+      info="Test the Field !">
+      <i class="fas fa-home"></i>
+    </Field>
 
     <Video url="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
 
@@ -63,6 +68,7 @@ import Quote from "@/components/basic/Quote.vue"
 import Button from "@/components/basic/Button.vue"
 import Media from "@/components/basic/Media.vue"
 import Video from "@/components/basic/Video.vue"
+import Field from "@/components/basic/Field.vue"
 import Audio from "@/components/basic/Audio.vue"
 import Link from "@/components/basic/Link.vue"
 import Container from "@/components/basic/Container.vue"
@@ -75,6 +81,7 @@ export default {
   components: {
     Code,
     Head,
+    Field,
     Quote,
     Link,
     List,

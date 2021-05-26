@@ -4,18 +4,20 @@
 
 <template>
   <figure>
-    <Video v-if="category === 'video'"
-      :src="src"
+    <Video v-if="cat === 'video'"
+      :url="url"
       :type="type"
       :width="width" />
 
-    <Audio v-else-if="category === 'audio'"
-      :src="src"
+    <Audio v-else-if="cat === 'audio'"
+      :url="url"
       :type="type" />
 
     <Picture v-else
+      :url="url"
+      :info="info"
       :src="src"
-      :alt="alt" />
+      :media="media" />
 
     <figcaption>
       <slot></slot>
@@ -38,13 +40,13 @@
       Video
     },
     props: {
-      category: {
+      cat: {
         type: String
       },
       legend: {
         type: String
       },
-      src: {
+      url: {
         type: String,
         required: true
       },
@@ -54,10 +56,10 @@
       width: {
         type: String
       },
-      alt: {
+      info: {
         type: String
       },
-      srcset: {
+      src: {
         type: String
       },
       media: {

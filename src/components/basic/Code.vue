@@ -3,27 +3,27 @@
 <!---------------------------->
 
 <template>
-  <code v-if="isInline === true">
-    <slot></slot>
-    {{ content }}
-  </code>
-
-  <pre v-else>
+  <pre v-if="isBlock === true">
     <slot></slot>
     {{ content }}
   </pre>
+
+  <code v-else>
+    <slot></slot>
+    {{ content }}
+  </code>
 </template>
 
 <script>
   export default {
     name: "Code",
     props: {
-      isInline: {
-        type: Boolean,
-        default: true
-      },
       content: {
-        type: String
+        type: String,
+        required: true
+      },
+      isBlock: {
+        type: Boolean
       }
     }
   }

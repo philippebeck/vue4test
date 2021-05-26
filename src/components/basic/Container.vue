@@ -6,7 +6,7 @@
   <article v-if="isArticle === true"
     :class="container">
 
-    <Title :level="level"
+    <Title :lvl="lvl"
       :title="title">
     </Title>
 
@@ -21,7 +21,7 @@
    <section v-else
     :class="container">
 
-    <Title :level="level"
+    <Title :lvl="lvl"
       :title="title">
     </Title>
 
@@ -55,8 +55,8 @@
         type: String,
         default: "container"
       },
-      level: {
-        type: [Number, String],
+      lvl: {
+        type: Number,
         default: 1
       },
       isArticle: {

@@ -23,10 +23,7 @@
         type: String
       },
       content: {
-        type: [
-          Number, 
-          String
-        ]
+        type: String
       }
     },
     methods: {

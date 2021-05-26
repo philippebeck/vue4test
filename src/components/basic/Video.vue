@@ -5,7 +5,7 @@
 <template>
   <video controls
     :width="width">
-    <source :src="src"
+    <source :src="url"
       :type="type">
   </video>
 </template>
@@ -14,7 +14,7 @@
   export default {
     name: "Video",
     props: {
-      src: {
+      url: {
         type: String,
         required: true
       },

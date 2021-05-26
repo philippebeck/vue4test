@@ -4,10 +4,10 @@
 
 <template>
   <picture>
-    <source :srcset="srcset" 
+    <source :srcset="src" 
       :media="media">
-    <img :src="src"
-      :alt="alt">
+    <img :src="url"
+      :alt="info">
   </picture>
 </template>
 
@@ -15,15 +15,15 @@
   export default {
     name: "Picture",
     props: {
+      url: {
+        type: String,
+        required: true
+      },
+      info: {
+        type: String,
+        required: true
+      },
       src: {
-        type: String,
-        required: true
-      },
-      alt: {
-        type: String,
-        required: true
-      },
-      srcset: {
         type: String
       },
       media: {

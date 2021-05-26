@@ -1,16 +1,17 @@
 <template>
   <section class="home">
-    <Title title="This is the home page">
+    <Title title="This is the home page"
+    :lvl="4">
       <i class="fas fa-home"></i>
     </Title>
 
     <Head text="This is a Head Example of a Vue Component !"/>
 
     <Media legend="The Progressive JavaScript Framework"
-      src="img/logo.png"
-      alt="Vue logo">
-        <Link href="https://vuejs.org"
-          title="Go to Vue Website">
+      url="img/logo.png"
+      info="Vue logo">
+        <Link url="https://vuejs.org"
+          info="Go to Vue Website">
           <i class="fas fa-home"></i>
           Vue
         </Link>      
@@ -22,12 +23,17 @@
     <Container :contents="['blablabla', 'bliblibli', 'blobloblo']"
       title="test du container"
       container="container-70sm">
-
     </Container>
 
-    <Video src="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
+    <Quote quote="Less code is better than More !"
+      info="John Doe"
+      url="https://www.freecodecamp.org/news/long-code-vs-short-code">
 
-    <Audio />
+    </Quote>
+
+    <Video url="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
+
+    <Audio url="media/trailer.mp3" />
 
     <Code content="$php !== js">
       <i class="fas fa-code"></i>
@@ -53,6 +59,7 @@
 // @ is an alias to /src
 import Code from "@/components/basic/Code.vue"
 import Head from "@/components/basic/Head.vue"
+import Quote from "@/components/basic/Quote.vue"
 import Button from "@/components/basic/Button.vue"
 import Media from "@/components/basic/Media.vue"
 import Video from "@/components/basic/Video.vue"
@@ -68,6 +75,7 @@ export default {
   components: {
     Code,
     Head,
+    Quote,
     Link,
     List,
     Media,

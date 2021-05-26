@@ -33,7 +33,7 @@
 
     <Video url="https://dl8.webmfiles.org/big-buck-bunny_trailer.webm"/>
 
-    <Audio url="media/trailer.mp3" />
+    <Audio url="audio/trailer.mp3" />
 
     <Code content="$php !== js">
       <i class="fas fa-code"></i>

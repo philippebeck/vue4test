@@ -3,8 +3,8 @@
 <!---------------------------->
 
 <template>
-  <a :href="href" 
-    :title="title">
+  <a :href="url" 
+    :title="info">
     <slot></slot>
     {{ content }}
   </a>
@@ -14,11 +14,11 @@
   export default {
     name: "Link",
     props: {
-      href: {
+      url: {
         type: String,
         required: true
       },
-      title: {
+      info: {
         type: String
       },
       content: {

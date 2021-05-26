@@ -3,34 +3,34 @@
 <!----------------------------->
 
 <template>
-  <h1 v-if="level == 1"> 
+  <h1 v-if="lvl == 1"> 
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h1>
 
-  <h2 v-else-if="level == 2">
+  <h2 v-else-if="lvl == 2">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h2>
 
-  <h3 v-else-if="level == 3">
+  <h3 v-else-if="lvl == 3">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h3>
 
-  <h4 v-else-if="level == 4">
+  <h4 v-else-if="lvl == 4">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h4>
 
-  <h5 v-else-if="level == 5">
+  <h5 v-else-if="lvl == 5">
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h5>
   
   <h6 v-else>
     <slot></slot>
-    {{ content }}
+    {{ title }}
   </h6>
 </template>
 
@@ -38,12 +38,13 @@
   export default {
     name: "Title",
     props: {
-      level: {
-        type: [Number, String],
-        default: 1
+      title: {
+        type: String,
+        required: true
       },
-      content: {
-        type: String
+      lvl: {
+        type: Number,
+        default: 1
       }
     }
   }

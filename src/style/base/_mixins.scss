@@ -1,13 +1,5 @@
 // ***** Base : Mixins *****
 
-// Container
-@mixin container($key, $type, $value) {
-  [class*="container-"][class*="-#{$key}#{$type}"] {
-    max-width: #{$value};
-  }
-}
-
-// Helpers
 @mixin helpers($class, $property, $value) {
   .#{$class},
   .global-#{$class} > *,

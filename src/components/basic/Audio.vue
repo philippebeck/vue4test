@@ -4,7 +4,7 @@
 
 <template>
   <audio controls>
-    <source :src="src"
+    <source :src="url"
       :type="type">
   </audio>
 </template>
@@ -13,7 +13,7 @@
   export default {
     name: "Audio",
     props: {
-      src: {
+      url: {
         type: String,
         required: true
       },

@@ -41,7 +41,7 @@
     background-color: var(--black);
     color: var(--green);
 
-    & > *::selection {
+    &::selection {
       background-color: var(--green);
       color: var(--black);
     }

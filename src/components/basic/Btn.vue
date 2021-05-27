@@ -1,120 +1,109 @@
-<template>
+<!--------------------------->
+<!-- Btn : basic component -->
+<!--------------------------->
 
+<template>
+  <a :class="btn"
+    :href="url"
+    :title="info">
+    <slot></slot>
+    {{ content }}
+  </a>
 </template>
     
 <script>
   export default {
-    name: "Btn"
+    name: "Btn",
+    props: {
+      btn: {
+        type: String,
+        default: "btn"
+      },
+      url: {
+        type: String,
+        required: true
+      },
+      info: {
+        type: String
+      },
+      content: {
+        type: String
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  $btn-tn-padding:    3px 6px   !default;
-  $btn-tn-font-size:  60%       !default;
-  $btn-sm-padding:    4px 8px   !default;
-  $btn-sm-font-size:  80%       !default;
-  $btn-lg-padding:    6px 12px  !default;
-  $btn-lg-font-size:  120%      !default;
-  $btn-xl-padding:    7px 14px  !default;
-  $btn-xl-font-size:  140%      !default;
-  $btn-wd-padding:    8px 16px  !default;
-  $btn-wd-font-size:  160%      !default;
-
-  $btn-size: 'tn', 'sm', 'lg', 'xl', 'wd';
-
-  $btn-sizes: (
-  'tn-padding':   $btn-tn-padding,
-  'tn-font-size': $btn-tn-font-size,
-  'sm-padding':   $btn-sm-padding,
-  'sm-font-size': $btn-sm-font-size,
-  'lg-padding':   $btn-lg-padding,
-  'lg-font-size': $btn-lg-font-size,
-  'xl-padding':   $btn-xl-padding,
-  'xl-font-size': $btn-xl-font-size,
-  'wd-padding':   $btn-wd-padding,
-  'wd-font-size': $btn-wd-font-size
-  ) !default;
-
-  $btn-square-border-radius:  unset                             !default;
-  $btn-square-padding-top:    calc(var(--btn-square-sizes) / 4) !default;
-  $btn-square-sizes:          100px                             !default;
-  $btn-curve-border-radius:   10px                              !default;
-  $btn-curve-padding-top:     calc(var(--btn-round-sizes) / 4)  !default;
-  $btn-curve-sizes:           100px                             !default;
-  $btn-round-border-radius:   20px                              !default;
-  $btn-round-padding-top:     calc(var(--btn-round-sizes) / 4)  !default;
-  $btn-round-sizes:           100px                             !default;
-  $btn-circle-border-radius:  50%                               !default;
-  $btn-circle-padding-top:    calc(var(--btn-circle-sizes) / 4) !default;
-  $btn-circle-sizes:          100px                             !default;
-
-  $btn-shape: 'square', 'round', 'circle';
-
-  $btn-shapes: (
-  'square-border-radius': $btn-square-border-radius,
-  'square-padding-top':   $btn-square-padding-top,
-  'square-sizes':         $btn-square-sizes,
-  'curve-border-radius':  $btn-curve-border-radius,
-  'curve-padding-top':    $btn-curve-padding-top,
-  'curve-sizes':          $btn-curve-sizes,
-  'round-border-radius':  $btn-round-border-radius,
-  'round-padding-top':    $btn-round-padding-top,
-  'round-sizes':          $btn-round-sizes,
-  'circle-border-radius': $btn-circle-border-radius,
-  'circle-padding-top':   $btn-circle-padding-top,
-  'circle-sizes':         $btn-circle-sizes,
-  ) !default;
 
   [class*="btn"],
   [class*="button"] {
-    --btn-margin: 10px;
-    --btn-padding: 10px;
-    --btn-font-size: 2rem;
-    --btn-font-weight: bold;
-    --btn-text-align: center;
-    --btn-hover-border-radius: 5px;
-    --btn-hover-transition: all 300ms linear;
-    --btn-hover-animation: none;
-    --btn-checked-transform: scale(0.9);
-    --btn-child-margin: auto;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 
-    @each $key, $value in $btn-sizes {
-      --btn-#{$key}: #{$value};
-    }
-
-    @each $key, $value in $btn-shapes {
-      --btn-#{$key}: #{$value};
+    & > * {
+      display: block;
+      margin: auto;
     }
   }
 
   [class*="btn"] {
-    --btn-border-style: solid;
-    --btn-border-width: medium;
-    --btn-border-radius: 10px;
-    --btn-border-color: var(--white);
-    --btn-background-color: var(--black);
-    --btn-color: var(--white);
-    --btn-hover-border-style: solid;
-    --btn-hover-border-width: medium;
-    --btn-hover-box-shadow: inset 0 0 5px 5px;
-    --btn-hover-border-color: var(--black);
-    --btn-hover-background-color: var(--white);
-    --btn-hover-color: var(--black);
+    border-style: solid;
+    border-width: medium;
+    border-radius: 10px;
+    border-color: var(--white);
+    background-color: var(--black);
+    color: var(--white);
   }
 
   [class*="button"] {
-    --button-border-style: outset;
-    --button-border-width: medium;
-    --button-border-radius: 5px;
-    --button-border-color: var(--black);
-    --button-background-color: var(--white);
-    --button-color: var(--black);
-    --button-hover-border-style: solid;
-    --button-hover-border-width: medium;
-    --button-hover-box-shadow: inset 0 0 5px 5px;
-    --button-hover-border-color: var(--white);
-    --button-hover-background-color: var(--black);
-    --button-hover-color: var(--white);
+    border-style: outset;
+    border-width: medium;
+    border-radius: 5px;
+    border-color: var(--black);
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  [class*="btn"]:hover,
+  [class*="button"]:hover,
+  [class*="btn"]:focus,
+  [class*="button"]:focus,
+  [class*="btn-check"]:checked + [class*="btn"],
+  [class*="button-check"]:checked + [class*="button"] {
+    border-radius: 5px;
+    transition: all 300ms linear;
+    animation: none;
+  }
+
+  [class*="btn"]:hover,
+  [class*="btn"]:focus,
+  [class*="btn-check"]:checked + [class*="btn"] {
+    border-style: solid;
+    border-width: medium;
+    box-shadow: inset 0 0 5px 5px;
+    border-color: var(--black);
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  [class*="button"]:hover,
+  [class*="button"]:focus,
+  [class*="button-check"]:checked + [class*="button"] {
+    border-style: solid;
+    border-width: medium;
+    box-shadow: inset 0 0 5px 5px;
+    border-color: var(--white);
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  [class*="check"]:checked + [class*="btn"],
+  [class*="check"]:checked + [class*="button"] {
+    transform: scale(0.9);
   }
 
   @mixin btn-color($key, $value) {
@@ -137,80 +126,52 @@
     }
   }
 
-  [class*="btn"],
-  [class*="button"] {
-    display: inline-block;
-    margin: var(--btn-margin);
-    padding: var(--btn-padding);
-    font-size: var(--btn-font-size);
-    font-weight: var(--btn-font-weight);
-    text-align: var(--btn-text-align);
-
-    & > * {
-      display: block;
-      margin: var(--btn-child-margin);
-    }
-  }
-
-  [class*="btn"] {
-    border-style: var(--btn-border-style);
-    border-width: var(--btn-border-width);
-    border-radius: var(--btn-border-radius);
-    border-color: var(--btn-border-color);
-    background-color: var(--btn-background-color);
-    color: var(--btn-color);
-  }
-
-  [class*="button"] {
-    border-style: var(--button-border-style);
-    border-width: var(--button-border-width);
-    border-radius: var(--button-border-radius);
-    border-color: var(--button-border-color);
-    background-color: var(--button-background-color);
-    color: var(--button-color);
-  }
-
-  [class*="btn"]:hover,
-  [class*="button"]:hover,
-  [class*="btn"]:focus,
-  [class*="button"]:focus,
-  [class*="btn-check"]:checked + [class*="btn"],
-  [class*="button-check"]:checked + [class*="button"] {
-    border-radius: var(--btn-hover-border-radius);
-    transition: var(--btn-hover-transition);
-    animation: var(--btn-hover-animation);
-  }
-
-  [class*="btn"]:hover,
-  [class*="btn"]:focus,
-  [class*="btn-check"]:checked + [class*="btn"] {
-    border-style: var(--btn-hover-border-style);
-    border-width: var(--btn-hover-border-width);
-    box-shadow: var(--btn-hover-box-shadow);
-    border-color: var(--btn-hover-border-color);
-    background-color: var(--btn-hover-background-color);
-    color: var(--btn-hover-color);
-  }
-
-  [class*="button"]:hover,
-  [class*="button"]:focus,
-  [class*="button-check"]:checked + [class*="button"] {
-    border-style: var(--button-hover-border-style);
-    border-width: var(--button-hover-border-width);
-    box-shadow: var(--button-hover-box-shadow);
-    border-color: var(--button-hover-border-color);
-    background-color: var(--button-hover-background-color);
-    color: var(--button-hover-color);
-  }
-
-  [class*="check"]:checked + [class*="btn"],
-  [class*="check"]:checked + [class*="button"] {
-    transform: var(--btn-checked-transform);
-  }
-
   @each $colors in $main-colors {
     @each $key, $value in $colors {
       @include btn-color($key, $value);
+    }
+  }
+
+    $btn-size: 'tn', 'sm', 'lg', 'xl', 'wd';
+
+  $btn-sizes: (
+  'tn-padding':   3px 6px,
+  'tn-font-size': 60%,
+  'sm-padding':   4px 8px,
+  'sm-font-size': 80%,
+  'lg-padding':   6px 12px,
+  'lg-font-size': 120%,
+  'xl-padding':   7px 14px,
+  'xl-font-size': 140%,
+  'wd-padding':   8px 16px,
+  'wd-font-size': 160%
+  ) !default;
+
+  $btn-shape: 'square', 'round', 'circle';
+
+  $btn-shapes: (
+  'square-border-radius': unset,
+  'square-padding-top':   25px,
+  'square-sizes':         100px,
+  'curve-border-radius':  10px,
+  'curve-padding-top':    25px,
+  'curve-sizes':          100px,
+  'round-border-radius':  20px,
+  'round-padding-top':    25px,
+  'round-sizes':          100px,
+  'circle-border-radius': 50%,
+  'circle-padding-top':   25px,
+  'circle-sizes':         100px,
+  ) !default;
+
+  [class*="btn"],
+  [class*="button"] {
+    @each $key, $value in $btn-sizes {
+      --btn-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $btn-shapes {
+      --btn-#{$key}: #{$value};
     }
   }
 

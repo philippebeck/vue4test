@@ -31,7 +31,7 @@
 <style lang="scss" scoped>
   a {
     color: var(--primary);
-    text-decoration: none;    
+    text-decoration: none;
   }
 
   a:hover,
